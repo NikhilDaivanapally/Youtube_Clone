@@ -1,0 +1,178 @@
+.WatchLater {
+  flex:1;
+  /* width: 100%; */
+  height: calc(100vh - 55px);
+  /* background-color: lightcoral; */
+  display: flex;
+  gap: 5px;
+  padding: 30px 5px 0px 30px;
+}
+.NoLikedVideos {
+  margin: auto;
+}
+.watchlater_info {
+  width: 30%;
+  height: 100%;
+  /* padding: 2vw; */
+  background-color: black;
+  /* border: 1px solid white; */
+  border-radius: 25px 25px 0 0;
+}
+.watchlater_list {
+  height: 100%;
+  flex: 1;
+  padding-top: 20px;
+  padding-right: 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* background-color: red; */
+}
+.watchlater_sort {
+  display: flex;
+  align-items: center;
+  gap: 0.8vw;
+  margin-bottom: 20px;
+  width: fit-content;
+  padding: 0.2vw 1vw;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.watchlater_sort:active {
+  border: 1px solid;
+}
+.watchlater_listvid {
+  height: 110px;
+  border-radius: 20px;
+  padding: 0.3vw;
+  /* background-color: grey; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  cursor: pointer;
+  user-select: none;
+}
+.watchlater_listvid:hover {
+  background-color: #272727;
+}
+.drag_icon {
+  cursor: grab;
+}
+.wathlater_video {
+  height: 100%;
+  aspect-ratio: 14/9;
+  border-radius: 20px;
+  background-color: black;
+  overflow: hidden;
+}
+.wathlater_video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.watchlater_details {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  font-size: 17px;
+  /* background-color: black; */
+}
+.watchlater_videodets {
+  display: flex;
+  gap: 0.2vw;
+  color: grey;
+  font-size: 13px;
+}
+.container_info {
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8vw;
+}
+.container_info .watchlater_title {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: myfont;
+  /* letter-spacing: 1px; */
+}
+.container_info .watchlater_username {
+  font-size: 15px;
+}
+.watchlater_thumbnail {
+  background-color: black;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  /* box-shadow: 2px 2px 5px grey; */
+}
+.watchlater_thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.watchlater_thumbnail .watchlater_playall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.watchlater_thumbnail:hover .watchlater_playall {
+  opacity: 1;
+}
+.watchlater_btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 1vw;
+}
+.watchlater_btn div svg {
+  margin-top: 3px;
+  /* background-color: red; */
+}
+
+.watchlater_btn button {
+  font-family: robota;
+  font-size: 15px;
+  width: 50%;
+  padding: 0.2vw;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.watchlater_threedots {
+  display: none;
+  width: 20px;
+  height: 30px;
+  /* background-color: red; */
+}
+.watchlater_listvid:hover .watchlater_threedots {
+  display: block;
+}
+@media (max-width: 1080px) {
+  .WatchLater {
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .watchlater_info {
+    width: calc(100% - 30px);
+    height: 50%;
+  }
+}

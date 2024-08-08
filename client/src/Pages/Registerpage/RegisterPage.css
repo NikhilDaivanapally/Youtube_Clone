@@ -1,0 +1,124 @@
+
+.y2_Register_Login{
+ width: 100%;
+ height: 100vh;
+ padding: 2vw 3.5vw;
+ color: white;
+ display: flex;
+ flex-direction: column;
+}
+.y2_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 120px;
+}
+.y2_logo{
+    fill: white;
+}
+.background{
+    position: absolute;
+  
+
+    width: 80px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: white;
+    /* box-shadow: 1px 1px 10px rgb(244, 110, 110); */
+    z-index: -1;
+    left: -0.5%;
+    transition: all 0.3s ease;
+}
+.slide{
+    left: 100%;
+    transform: translateX(-105%);
+}
+
+
+.signup_signin{
+    width: 170px;
+    height: 50px;
+    padding-inline: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 2vw; */
+    color:rgb(244, 80, 80);
+    /* background-color: antiquewhite; */
+    position: relative;
+   cursor: pointer;
+}
+.mainPage{
+    font-family:'';
+    width: 100%;
+    height: 100%;
+    padding-inline: 2vw;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* border: 1px solid ; */
+}
+.mainPage .leftpart{
+    font-size: 30px;
+    font-family:myfont;
+}
+.mainPage .leftpart h1{
+    margin-block: 10px;
+}
+.mainPage .leftpart span{
+    background-color: white;
+    /* padding: ; */
+    color: rgb(244, 80, 80);
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 50px;
+    /* line-height: -1px; */
+}
+.mainPage .rightpart{
+    font-family: robota;
+    margin-right: 150px;
+    /* background-color: red; */
+}
+.mainPage .rightpart form {
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.mainPage .rightpart .field{
+    outline: none;
+    border: none;
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: rgb(249, 247, 247);
+
+}
+.mainPage .rightpart button{
+    padding: 10px 20px;
+    font-family: robota;
+    font-size: 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(244, 80, 80);
+}
+.mainPage .rightpart form .uploads{
+    width: fit-content;
+    height:35px;
+    background:white;
+    display:flex;
+    align-items: center;
+    gap:5px;
+    border-radius: 5px;
+    padding-inline: 10px;
+    cursor: pointer;
+}
+
+.uploads .text{
+    font-size: 15px;
+    color: grey;
+}

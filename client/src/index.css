@@ -1,0 +1,41 @@
+@font-face {
+  font-family: robota;
+  src: url(../KFOmCnqEu92Fr1Mu4mxK.ttf);
+}
+@font-face {
+  font-family: myfont;
+  src: url(../659dbdfd5a080be8d348316e_PP\ Neue\ Machina\ Inktrap\ Medium.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(212, 95, 95);
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* overflow-x: hidden; */
+  font-family: robota;
+}
+body::-webkit-scrollbar{
+  appearance: none;
+}
+
+*::-webkit-scrollbar{
+  appearance: none;
+  height: 100px;
+  width: 20px;
+
+}
+*::-webkit-scrollbar-thumb{
+  background-color: #ABABAB;
+  /* height: 55px; */
+  border: 5px solid black;
+  
+}

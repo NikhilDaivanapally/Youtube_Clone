@@ -1,0 +1,200 @@
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+}
+.Container {
+  height: calc(100vh - 55px);
+  width: 100%;
+}
+.Container .HistoryComp {
+  flex: 1;
+  display: flex;
+}
+.Container .HistoryComp .History_videos{
+    flex: 1;
+    /* width: 60%; */
+    /* background-color: green; */
+    padding:2vw 0 0 3.5vw;
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+.History_videos .No_history{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.History_settings{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    width: 35%;
+
+}
+.History_controlls{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: red; */
+}
+
+.History_settings .History_controlls .History_search{
+    width: fit-content;
+    padding:5px 0px;
+    color: black;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 7px;
+     border-bottom: 1px solid rgb(150, 149, 149);
+     position: relative;
+
+
+}
+.History_search input{
+    background-color: transparent;
+    border: none;
+    font-size: 15.5px;
+    font-weight: 500;
+    outline: none;
+    color: white;
+}
+.History_search input::placeholder{
+    color: rgb(150, 149, 149);
+}
+.History_search::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    scale: 0;
+    transition: all 0.3s ease;
+}
+.History_search:focus-within::after {
+    scale: 1;
+}
+.History_btns{
+    font-size: 14.5px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.History_btns:hover{
+    background-color: grey;
+    
+}
+.Container .HistoryComp .History_videos .Main_vdx{
+
+    display: flex;
+    flex-direction: column;
+    gap: 0vh;
+}
+.Container .HistoryComp .History_videos .Main_vdx .Child_vdx{
+    padding-block: 3vh 6vh;
+   border-bottom: 1px solid grey;
+   display: flex;
+   flex-direction: column;
+   gap: 3vh;
+}
+
+
+
+.vdx{
+    height: 150px;
+    display: flex;
+    gap: 2vw;
+    cursor: pointer;
+}
+.vdx .vdx_thumbnail{
+    height: 100%;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.vdx .vdx_info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.vdx .vdx_info .video_title{
+    display: flex;
+    justify-content: space-between;
+}
+.vdx:hover .del_dots{
+    visibility: inherit;
+}
+.video_title .del_dots{
+    visibility: hidden;
+    position: relative;
+}
+.del_dots .tooltip{
+    background-color: rgb(70, 69, 69);
+
+    position: absolute;
+    font-size: 13.5px;
+    padding: 0.3vw;
+    border-radius: 5px;
+    top: 110%;
+    right: 0;
+    width: 100px;
+    white-space: wrap;
+    display: none;
+    text-align: center;
+}
+
+.del_dots svg{
+    padding: 5px;
+    position: relative;
+    z-index: 3;
+
+}
+.del_dots:hover svg{
+    border-radius: 50%;
+    background-color: rgb(70, 69, 69);
+}
+.del_dots:hover .tooltip{
+    display: block;
+}
+.vdx_Container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.vdx .vdx_thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.History_videos::-webkit-scrollbar{
+    display: none;
+}
+.video_title{
+    font-size: 23px;
+}
+.owner_view{
+    color: grey;
+    font-size: 13.5px;
+    display: flex;
+    gap:0.6vw;
+}
+.views{
+    color: grey;
+    font-size: 13.5px;
+    margin-top: 6px;
+}

@@ -1,0 +1,210 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5vw 2.2vw;
+  height: 55px;
+  position: relative;
+  z-index: 100;
+}
+.left {
+  display: flex;
+  align-items: center;
+  gap: 1.2vw;
+}
+.left .hambergur {
+  width: 20px;
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left .hambergur .slide {
+  width: 100%;
+  height: 1.3px;
+  background-color: white;
+}
+.icon {
+  width: 90px;
+  background-color: black;
+}
+#logo {
+  fill: white;
+}
+.mid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.mid .searchbar {
+  height: 100%;
+  width: 40vmax;
+  /* background-color: green; */
+  border-radius:50px;
+  display: flex;
+  /* overflow: hidden; */
+}
+#search_form{
+    flex:1;
+}
+.searchbar input{
+  height: 100%;
+   width: 100%;
+    outline: none;
+    border: 1.5px solid #303030;
+    /* border: 2px solid #272727; */
+    border-radius: 25px 0 0 25px;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: white;
+    font-size: 17px;
+  border-right:none ;
+
+}
+.searchbar input:focus{
+    border: 1.5px solid #163964;
+}
+.searchbar .icon{
+    /* border-left: 2px solid #303030; */
+    width: 10%;
+    border-radius: 0 25px 25px 0px;
+    /* height: 100%; */
+    background-color: #222222;
+    padding: 4px;
+  border: 1.5px solid #303030;
+  cursor: pointer;
+
+}
+.searchbar .icon svg{
+    fill: white;
+}
+.voiceicon {
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  aspect-ratio: 1;
+  background-color: #272727;
+}
+.right{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+.right .video,.right .notify,.right .profile{
+    height: 100%;
+    aspect-ratio: 1;
+    /* background-color: aqua; */
+    border-radius: 50%;
+    /* overflow: hidden; */
+    padding: 7px;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    position: relative;
+    
+}
+.right .profile{
+  padding: 2px;
+    background-color: white;
+    cursor:pointer;
+}
+.right .video:hover,.right .notify:hover{
+    background-color: #272727;
+}
+.right .video:hover .tooltip,.right .notify:hover .tooltip{
+    display: block;
+}
+.right .video .tooltip,.right .notify .tooltip{
+    padding: 3px;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    border-radius: 3px;
+    display: none;
+}
+
+.right svg{
+    fill: white;
+
+}
+.settingsPage{
+  position: absolute;
+width: 280px;
+height: fit-content;
+background-color:#282828;
+border-radius: 8px;
+top: 100%;
+right: 5%;
+overflow: hidden;
+/* padding: 15px; */
+/* transform: translateX(-50%); */
+}
+.user_info{
+  /* background-color: red; */
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1vw;
+  border-bottom: 2px solid rgb(61, 61, 61);
+
+}
+.user_icon{
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  /* border-radius: 50%; */
+  padding: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user p:last-child{
+  color: rgb(88, 88, 252);
+  cursor: pointer;
+}
+.accounts, .uploadvideo{
+  padding-block: 5px;
+  border-bottom: 2px solid rgb(61, 61, 61);
+
+}
+.accounts ul, .uploadvideo ul{
+  width: 100%;
+  /* background-color: red; */
+}
+.accounts ul li,.uploadvideo ul li{
+  width: 100%;
+  height: 43px;
+  padding: 8px 25px;
+  list-style: none;
+  /* text-align: center; */
+  /* background-color: aqua; */
+  /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+.accounts ul li:hover ,.uploadvideo ul li:hover{
+  background-color: #3E3E3E;
+}
+
+.accounts ul li .icons,.uploadvideo ul li .icons{
+  height: 100%;
+}
+svg{
+  fill: white;
+}
+.uploadvideo{
+  position: absolute;
+  width: 200px;
+  height: fit-content;
+  background-color: #282828;
+  border-radius: 4px;
+  top: 100%;
+  right: 11%;
+}

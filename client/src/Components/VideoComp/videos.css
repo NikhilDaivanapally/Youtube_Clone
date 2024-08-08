@@ -1,0 +1,313 @@
+/* contanier for videos */
+.videos_container {
+  flex: 1;
+  height: calc(100vh - 55px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 30px;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  position: relative;
+  padding-bottom: 50px;
+ scroll-behavior: smooth;
+ white-space:no-wrap;
+}
+@media (max-width:1479px) {
+  .videos_container{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}@media (max-width:1000px) {
+  .videos_container{
+    grid-template-columns:repeat(1, 1fr);
+  }
+}
+.savetoplaylist_config{
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.saveContainer div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.saveContainer div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.saveContainer .createpl{
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+}
+.saveContainer .createplform form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+}
+.saveContainer .createplform form label{
+  font-size: 13px;
+}
+.saveContainer .createplform form input{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  color: white;
+}
+/* .saveContainer .createplform form input: */
+
+.saveContainer .createplform form button{
+  width: fit-content;
+  font-size: 16px;
+  background-color:transparent;
+  border: none;
+  color: rgb(85, 143, 243);
+  padding: 0.8vw 1vw;
+  border-radius: 20px;
+  align-self: flex-end;
+  margin-top: 10px;
+}
+.saveContainer .createplform form button:hover{
+  background-color:rgb(85, 143, 243,0.3);
+}
+
+
+.saveContainer{
+  background-color: rgb(36, 35, 35);
+  width: 250px;
+  padding: 2vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.saveContainer ul {
+  width: 100%;
+}
+.saveContainer div:first-child span{
+  cursor: pointer;
+}
+.saveContainer ul li input{
+  width: 20px;
+  height: 20px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  pointer-events: none;
+}
+.saveContainer ul li label{
+  pointer-events: none;
+}
+.saveContainer ul li {
+  user-select: none;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 5px 0; */
+  /* background-color: rgb(244, 160, 160); */
+
+}
+.videos_container::-webkit-scrollbar {
+  appearance: none;
+  height: 100px;
+  width: 20px;
+}
+.videos_container::-webkit-scrollbar-thumb {
+  background-color: #ababab;
+  border: 5px solid black;
+}
+/* styling for each video box */
+.videos_container .video_box {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  cursor: pointer;
+  position: relative;
+}
+.video_section {
+  width: 100%;
+  height: 250px;
+  /* background-color: grey; */
+  border-radius: 13px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.video_section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 13px;
+  transition: all 0.2s ease;
+}
+.video_section .mute_cc {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  padding: 7px 3px;
+  height: 37px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.video_section .mute_cc .mute_icon {
+  border-right: 1px solid grey;
+}
+.video_section .mute_cc .mute_icon,
+.video_section .mute_cc .captions_cc {
+  width: 40px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.video_section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 13px;
+  transition: all 0.2s ease;
+}
+.video_section video:hover {
+  border-radius: 0px;
+}
+
+.title_profile {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  gap: 2vw;
+}
+
+.title_profile .profile {
+  width: 40px;
+  height: 100%;
+  background-color: grey;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+}
+.title_profile .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.title_profile .title {
+  height: 40px;
+  text-wrap: wrap;
+  font-size: 17px;
+}
+.channel_view {
+  width: 50%;
+  height: 30px;
+  margin-left: 58px;
+  margin-top: -15px;
+}
+.channel_view {
+  font-size: 15px;
+  color: grey;
+}
+.title_profile .three_dots {
+  width: 35px;
+  height: 35px;
+  margin-left: auto;
+  justify-self: end;
+  scale: 0.9;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  display: none;
+  position: relative;
+  border: 1px solid black;
+}
+.three_dots_menu {
+  position: absolute;
+  top: 85%;
+  right: 0;
+  z-index: 99;
+  width: fit-content;
+  height: fit-content;
+  background-color: #282828;
+  z-index: 999;
+  border-radius: 13px;
+  animation: scale 0.3s ease forwards;
+  scale: 0.8;
+  overflow: hidden;
+  padding-block: 5px;
+}
+@keyframes scale {
+  to {
+    scale: 1;
+  }
+}
+
+.three_dots:active {
+  scale: 1;
+  border: 1px solid grey;
+  background-color: rgb(63, 62, 62);
+}
+.three_dots svg {
+  margin: 5px 0 0 4px;
+  width: 15px;
+  height: 20px;
+}
+
+.three_dots_menu ul {
+  width: 100%;
+  height: 100%;
+}
+.three_dots_menu ul li {
+  width: 100%;
+  height: 40px;
+  padding: 8px 25px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.threedotslist {
+  height: 100%;
+}
+.three_dots_menu ul li:hover {
+  background-color: #3e3e3e;
+}
+.video_loader{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 4px solid grey;
+  border-top: 4px solid white;
+  animation: rotate 0.6s linear  infinite;
+  margin-left: 580px;
+}
+@keyframes rotate {
+  to{
+    rotate: 360deg;
+  }
+  
+}

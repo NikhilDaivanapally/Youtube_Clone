@@ -1,0 +1,8 @@
+.LikedVideos{
+    width: 100%;
+    height: calc(100vh - 85px);
+    background-color:lightcoral;
+    border: 1px solid white;
+  margin: 30px;
+
+}

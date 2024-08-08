@@ -1,0 +1,84 @@
+.sidenav{
+    /* background-color: rgb(193, 159, 159); */
+    width: 270px;
+    /* height: 100%; */
+    height:calc(100vh - 55px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.sidenav::-webkit-scrollbar{
+    appearance: none;
+    width: 5px;
+}
+
+
+.sidenav::-webkit-scrollbar-button{
+    appearance: none;
+}
+.sidenav::-webkit-scrollbar-thumb{
+    appearance: none;
+    /* display: none; */
+    background-color: #ABABAB;
+    height: 50px;
+    border-radius: 10px;
+}
+.innernav:hover  .sidenav::-webkit-scrollbar-thumb{
+    background-color: aqua;
+}
+.innernav{
+    width: 100%;
+    height: 100%;
+    padding: 20px 17px 0 10px;
+    /* overflow-y: scroll; */
+    /* background-color: aqua; */
+}
+
+.firstnav{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    /* gap: 10px; */
+    border-bottom: 1px solid grey;
+}
+.secondnav{
+    padding-block: 20px;
+    border-bottom: 1px solid grey;
+
+}
+.container{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    padding: 8px 15px;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    
+}
+.container:hover{
+    background-color: #272727;
+
+}
+.active{
+    background-color: #272727;
+}
+.svg_Container{
+    height: 100%;
+    /* background-color: beige; */
+
+}
+.svg_Container svg{
+    fill:white;
+}
+.title{
+    font-size: 15px;
+}
+
+/* Link style */
+a{
+    color: white;
+    text-decoration: none;
+}

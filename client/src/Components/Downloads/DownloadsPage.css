@@ -1,0 +1,11 @@
+.DownloadsPage{
+    width: 100%;
+    height: calc(100vh - 85px);
+    color: white;
+    display: flex;
+    /* background-color: red; */
+    
+}
+.DownloadsPage div{
+    margin: auto;
+}
